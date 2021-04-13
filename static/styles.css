@@ -1,0 +1,51 @@
+body {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  background: #eeeeee;
+  text-align: center;
+  justify-content: center;
+}
+
+h1 {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-style: italic;
+}
+
+/* Styling for Highlight Under 'Anyone Can Draw' Title */
+.highlight {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 80%,
+    rgba(247, 136, 136, 0.9) 20%
+  );
+}
+
+/* Styling for File Upload Buttons */
+input {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+/* Styling for Artwork Cards */
+.card {
+  background: #ffffff;
+  margin: 1rem 6rem;
+  padding: 2rem 0;
+  /* add shadows to create "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+/* on mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+.card-img {
+  width: 50%;
+  height: auto;
+}
