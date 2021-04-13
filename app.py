@@ -39,7 +39,7 @@ def index():
             file.save(save_old)
             
             # generate different styles of art from image
-            art_functions = {"oil": art.oil_painting, "watercolor": art.watercolor, "pencil_gray": art.pencil_sketch_bw, "pencil_color": art.pencil_sketch_color, "pointillist": art.pointillize}
+            art_functions = {"oil": art.oil_painting, "watercolor": art.watercolor, "pencil_gray": art.pencil_sketch_bw, "pencil_color": art.pencil_sketch_color, "pointillist": art.pointillize, "poster": art.posterize}
             art_filenames = []
             img = cv2.imread(save_old)
             for style in art_functions:

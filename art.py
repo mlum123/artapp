@@ -51,7 +51,7 @@ def pencil_sketch_color(img):
     dst_gray, dst_color = cv2.pencilSketch(img, sigma_s=60, sigma_r=0.07, shade_factor=0.05)
     return dst_color
 
-#####################
+###################################################
 # Pointillist Painting
 import scipy.spatial
 import numpy as np
@@ -140,3 +140,67 @@ def pointillize(img, primary_colors=20):
         cv2.ellipse(canvas, (x, y), (radius_width, radius_width), 0, 0, 360, color, -1, cv2.LINE_AA)
     
     return canvas
+
+###################################################
+# Posterize an Image
+import math
+
+def getMeans(img, k):
+    """
+    getMeans is a helper function for posterize that takes in the number k of means we want
+    returns a list of lists representing a list of the means (each of which is a list of rgb values)
+    """
+    # set k (the number of means) in NUM_MEANS
+    # and cluster the pixel intensities
+    NUM_MEANS = k
+    clusters = KMeans(n_clusters = NUM_MEANS)
+    clusters.fit(img)
+    
+    # after the call to fit, the key information is contained in clusters.cluster_centers_ :
+    centers_int = []
+    for center in clusters.cluster_centers_:
+        # note that the center's values are floats, not ints! we must convert to ints here
+        centers_int += [[int(p) for p in center]]
+        
+    return(centers_int)
+
+def findClosestMean(pixel, means):
+    """
+    findClosestMean is a helper function for posterize that takes in a pixel as a list of rgb values
+    and a list of lists representing a list of the means (each of which is a list of rgb values)
+    returns the mean (a list of rgb values) that the pixel is closest to, by Pythagorean-style distance
+    """
+    minDistance = getDistance(pixel, means[0])
+    closestMean = means[0]
+    for mean in means:
+        distance = getDistance(pixel, mean)
+        if distance < minDistance:
+            minDistance = distance
+            closestMean = mean
+    
+    return closestMean
+
+def getDistance(pix1, pix2):
+    """
+    getDistance is a helper function for findClosestMean that takes in two pixels, pix1 and pix2, that are each a list of rgb values
+    returns the Pythagorean-style distance between the two pixels
+    """
+    return math.sqrt((pix1[0] - pix2[0])**2 + (pix1[1] - pix2[1])**2 + (pix1[2] - pix2[2])**2)
+
+def posterize(image, k=4):
+    """
+    posterize is a function that takes in an image, and the number k of means we want (the num of colors we'll use) (default: 4)
+    returns a posterized version of the image, using k-means
+    """
+    # reshape the image to be a list of pixels
+    image_pixels = image.reshape((image.shape[0] * image.shape[1], 3))
+
+    means = getMeans(image_pixels, k)                             # get list of k means (each of which is a list of rgb values)
+    
+    # loop over all pixels in img
+    for row in range(len(image)):
+        for col in range(len(image[0])):
+            closestMean = findClosestMean(image[row][col], means) # find closest mean, by Pythagorean-style distance
+            image[row][col] = closestMean                         # replace pixel with that mean
+    
+    return image
