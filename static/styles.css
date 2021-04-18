@@ -73,6 +73,7 @@ input[type="submit"] {
 /* Styling for Redirect Link on Artwork Results Page */
 .custom-link {
   text-decoration: none;
+  margin-bottom: 2rem;
 }
 
 .custom-link,

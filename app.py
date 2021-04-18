@@ -59,7 +59,7 @@ def index():
 # used for uploading pictures
 @app.route('/<filename>')
 def get_file(filename):
-    return send_from_directory('static', filename)
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 # allowed image types 
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
