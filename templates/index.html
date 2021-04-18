@@ -3,7 +3,10 @@
 {% block content %}
 <h2>upload a photo that you want to transform into art!</h1>
 <form method=post enctype=multipart/form-data>
-    <input type=file name=file>
-    <input type=submit value=Upload>
+    <label for=file-upload class=custom-button>choose file</label>
+    <input id=file-upload type=file name=file>
+
+    <label for=submit-button class=custom-button>upload file</label>
+    <input id=submit-button type=submit value=Upload>
 </form>
 {% endblock %}
