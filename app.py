@@ -39,7 +39,11 @@ def index():
             file.save(save_old)
             
             # generate different styles of art from image
+
+            # NOTE: use the commented-out art_functions line instead if you want to see the pointillist and posterizing results as well
+            # however, I don't display those results here because if I did, Heroku would timeout the request at 30 seconds before the processes are done running, and we wouldn't be able to see any resulting images
             # art_functions = {"oil": art.oil_painting, "watercolor": art.watercolor, "pencil_gray": art.pencil_sketch_bw, "pencil_color": art.pencil_sketch_color, "pointillist": art.pointillize, "poster": art.posterize}
+            
             art_functions = {"oil": art.oil_painting, "watercolor": art.watercolor, "pencil_gray": art.pencil_sketch_bw, "pencil_color": art.pencil_sketch_color}
             art_filenames = []
             img = cv2.imread(save_old)
