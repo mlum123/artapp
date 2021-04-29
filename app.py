@@ -9,12 +9,22 @@ import art
 app = Flask(__name__, static_url_path='')
 app.config.from_object(Config)
 
-# home page is image uploading page
-@app.route('/', methods=["GET", "POST"])
+# home page
+@app.route('/', methods=["GET"])
 def index():
     """
-    index page (home page) either displays a form for user to upload images
-    or the resulting artwork from an uploaded image
+    index page (home page) gives user the choice to
+    either go to imageToArt page to convert one photo into different styles of art
+    or to go to styleTransfer page to take two photos and do style transfer with them
+    """
+    return render_template('index.html')
+
+# imageToArt page is single image uploading page
+@app.route('/imageToArt', methods=["GET", "POST"])
+def imageToArt():
+    """
+    imageToArt page either displays a form for user to upload a single image to convert to art
+    or the resulting artwork from an uploaded image,
     depending on if it's a GET or a POST request
     """
     if request.method == 'POST':
@@ -55,11 +65,11 @@ def index():
                 cv2.imwrite(save_new, new_img)
             
             # render template with resulting artwork
-            rt = render_template('results.html', filenames=art_filenames)
+            rt = render_template('imageToArtResults.html', filenames=art_filenames)
             
             return rt
     
-    return render_template('index.html')
+    return render_template('imageToArt.html')
 
 # used for uploading pictures
 @app.route('/<filename>')

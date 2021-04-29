@@ -1,12 +1,5 @@
-{% extends "base.html" %}
-
-{% block content %}
-<h2>upload a photo that you want to transform into art!</h1>
-<form method=post enctype=multipart/form-data>
-    <label for=file-upload class=custom-button>choose file</label>
-    <input id=file-upload type=file name=file>
-
-    <label for=submit-button class=custom-button>upload file</label>
-    <input id=submit-button type=submit value=Upload>
-</form>
+{% extends "base.html" %} {% block content %}
+<h2>what would you like to do today?</h2>
+<a href="/imageToArt" class="custom-button custom-link">photo to art</a>
+<a href="/styleTransfer" class="custom-button custom-link">style transfer</a>
 {% endblock %}
