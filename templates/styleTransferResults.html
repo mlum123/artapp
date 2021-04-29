@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+<h2>style transfer results!</h2>
+{% if filenames[0] %}
+<div class="card">
+  <img src="{{url_for('get_file', filename=filenames[0]) }}" class="card-img" />
+  <div class="container">
+    <p>content image</p>
+  </div>
+</div>
+{% endif %} {% if filenames[1] %}
+<div class="card">
+  <img src="{{url_for('get_file', filename=filenames[1]) }}" class="card-img" />
+  <div class="container">
+    <p>style image</p>
+  </div>
+</div>
+{% endif %} {% if filenames[2] %}
+<div class="card">
+  <img src="{{url_for('get_file', filename=filenames[2]) }}" class="card-img" />
+  <div class="container">
+    <p>combined image!</p>
+  </div>
+</div>
+{% endif %}
+<a href="/" class="custom-button custom-link">return to home page!</a>
+{% endblock %}

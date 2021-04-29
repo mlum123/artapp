@@ -3,7 +3,9 @@ from config import Config
 import os
 from werkzeug.utils import secure_filename
 import cv2
+import matplotlib.pyplot as plt
 
+import time
 import art
 
 app = Flask(__name__, static_url_path='')
@@ -19,7 +21,7 @@ def index():
     """
     return render_template('index.html')
 
-# imageToArt page is single image uploading page
+# imageToArt page is single image to art uploading page
 @app.route('/imageToArt', methods=["GET", "POST"])
 def imageToArt():
     """
@@ -70,6 +72,57 @@ def imageToArt():
             return rt
     
     return render_template('imageToArt.html')
+
+# styleTransfer page is two images for style transfer uploading page
+@app.route('/styleTransfer', methods=["GET", "POST"])
+def styleTransfer():
+    """
+    styleTransfer page either displays a form for user to upload two images for style transfer
+    or the resulting artwork from style transfer,
+    depending on if it's a GET or a POST request
+    """
+    if request.method == 'POST':
+        files = request.files.getlist("file")
+
+        # check if the post request has the file part
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        
+        for file in files:
+            # if user does not select file, browser also submits an empty part without filename
+            if file.filename == '':
+                flash('No selected file')
+                return redirect(request.url)
+        
+        # if the content and style images are valid, do the following
+        # content image is files[0]
+        # style image is files[1]
+        if files[0] and allowed_file(files[0].filename) and files[1] and allowed_file(files[1].filename):
+            filename_content = secure_filename(files[0].filename)
+            # create a path to the image in the upload folder, save the upload file to this path
+            save_content=(os.path.join(app.config['UPLOAD_FOLDER'], filename_content))
+            files[0].save(save_content)
+
+            filename_style = secure_filename(files[1].filename)
+            # create a path to the image in the upload folder, save the upload file to this path
+            save_style=(os.path.join(app.config['UPLOAD_FOLDER'], filename_style))
+            files[1].save(save_style)
+            
+            # perform style transfer using style_transfer function in art module
+            img_content = plt.imread(save_content)
+            img_style = plt.imread(save_style)
+            new_img = art.style_transfer(img_content, img_style)
+            new_filename = filename_content.rsplit('.', 1)[0] + '_' + "style_transfer" + '.' + filename_content.rsplit('.', 1)[1]
+            save_new=(os.path.join(app.config['UPLOAD_FOLDER'], new_filename))
+            plt.imsave(save_new, new_img)
+            
+            # render template with resulting artwork
+            rt = render_template('styleTransferResults.html', filenames=[filename_content, filename_style, new_filename])
+            
+            return rt
+    
+    return render_template('styleTransfer.html')
 
 # used for uploading pictures
 @app.route('/<filename>')

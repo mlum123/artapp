@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>upload two photos for style transfer!</h2>
+<form method=post enctype=multipart/form-data>
+    <label for=file-upload-content class=custom-button>choose content image</label>
+    <input id=file-upload-content type=file name=file>
+
+    <label for=file-upload-style class=custom-button>choose style image</label>
+    <input id=file-upload-style type=file name=file>
+    <br>
+    <br>
+
+    <label for=submit-button class=custom-button>upload files</label>
+    <input id=submit-button type=submit value=Upload>
+</form>
+{% endblock %}

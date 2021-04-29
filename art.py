@@ -204,3 +204,37 @@ def posterize(image, k=4):
             image[row][col] = closestMean                         # replace pixel with that mean
     
     return image
+
+###################################################
+# Style Transfer Using TensorFlow Hub
+import tensorflow as tf
+import tensorflow_hub as hub
+
+def style_transfer(content_image, style_image):
+    """
+    style_transfer is a function that takes in a content image and a style image,
+    blends them together into a resulting image that looks like content image but in style of style image,
+    using pretrained TensorFlow Hub model
+    returns resulting image
+    """
+    # convert to float32 numpy array, add batch dimension, normalize to range [0, 1]
+    content_image = content_image.astype(np.float32)[np.newaxis, ...] / 255.
+    style_image = style_image.astype(np.float32)[np.newaxis, ...] / 255.
+
+    # optionally resize the images
+    # it's recommended that the style image is about 256 pixels
+    # (that was the size used to train the style transfer network)
+    # the content image can be any size
+    style_image = tf.image.resize(style_image, (256, 256))
+
+    # load image stylization module
+    hub_module = hub.load('https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2')
+
+    # stylize image
+    outputs = hub_module(tf.constant(content_image), tf.constant(style_image))
+    stylized_image = outputs[0]
+
+    # out = (np.squeeze(stylized_image, axis=0) * 255).astype(np.uint8)  # remove the batch dimension and convert from 0 - 1 to 0 - 255 range
+    out = np.squeeze(stylized_image, axis=0)                             # remove the batch dimension
+
+    return out
