@@ -76,8 +76,10 @@ INSERT VIDEO
 
 ## Photo to Art Examples
 
-original photo: 
-<img width="300" alt="Food Original Photo" src="https://user-images.githubusercontent.com/14852932/116738897-e9ad1880-a9a7-11eb-8c32-dede8e2ad338.jpeg" />
+<figure>
+  <img width="300" alt="Food Original Photo" src="https://user-images.githubusercontent.com/14852932/116738897-e9ad1880-a9a7-11eb-8c32-dede8e2ad338.jpeg" />
+  <figcaption>original photo</figcaption>
+</figure>
 
 oil painting:
 <img width="300" alt="Food Oil Painting" src="https://user-images.githubusercontent.com/14852932/116739201-414b8400-a9a8-11eb-83da-87eacfe151a0.jpeg" />
