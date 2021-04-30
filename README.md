@@ -9,6 +9,7 @@ Anyone Can Draw is a Flask web app that allows you to upload photos and turn the
 The app can also perform style transfer. Upload one content image and one style image, and it'll produce an image with the content of the content image but in the style of the style image.
 
 **_Deployed at https://michelles-art-app.herokuapp.com/_**
+
 (unfortunately without the pointillist painting and posterized results because those are too slow for Heroku's default request timeout of 30 seconds)
 
 **_Flask App Demo: https://youtu.be/SUOt_b0j2bg_**
