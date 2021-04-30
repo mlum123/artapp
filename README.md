@@ -8,9 +8,7 @@ Anyone Can Draw is a Flask web app that allows you to upload photos and turn the
 
 The app can also perform style transfer. Upload one content image and one style image, and it'll produce an image with the content of the content image but in the style of the style image.
 
-**_Deployed at https://michelles-art-app.herokuapp.com/_**
-
-(unfortunately without the pointillist painting and posterized results because those are too slow for Heroku's default request timeout of 30 seconds)
+**_Deployed at https://michelles-art-app.herokuapp.com/_** (unfortunately without the pointillizing and posterizing features because those are too slow for Heroku's default request timeout of 30 seconds)
 
 **_Flask App Demo: https://youtu.be/SUOt_b0j2bg_**
 
@@ -74,6 +72,9 @@ Needed to fix library errors when using OpenCV on a Heroku app with heroku-build
 
 Procfile:
 Specifies the command to be executed by the Heroku app on startup.
+
+neural-style-transfer.py:
+This file is not actually needed for the Flask app. It's a script that runs the whole neural style transfer process (using gradient descent to minimize content loss and style loss), taking advantage of TensorFlow's VGG19 image classification model. It was part of my neural style transfer exploration. But for my Flask app, I ultimately ended up using TensorFlow Hub's image stylization module for faster style transfer, instead of the code in this file.
 
 ## Photo to Art Examples
 
@@ -155,4 +156,4 @@ Ultimately, deploying to Heroku still proved to be a bit iffy. I was not able to
 
 Overall, though, I would say this project went pretty well. It was exciting to be able to successfully convert photos to so many different styles of art, and I was able to experiment with two methods of style transfer, both of which gave interesting results.
 
-Next time, I'd try deploying my Flask app through a different service, since Heroku gave me quite a bit of trouble. I might find more success deploying my app on another platform!
+Next time, I'd try deploying my Flask app through a different service, since Heroku gave me quite a bit of trouble. I might find more success deploying my app on another platform! I'd also love to explore converting photos into even more styles of art, such as impressionism or cubism.
