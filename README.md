@@ -122,7 +122,7 @@ INSERT VIDEO
 
 *output image*
 
-<img width="300" alt="Totoro Composition 8 Combined Image Original Process" src="https://user-images.githubusercontent.com/14852932/116739945-29c0cb00-a9a9-11eb-83a7-eb018a8d1bcc.png">
+<img width="350" alt="Totoro Composition 8 Combined Image Original Process" src="https://user-images.githubusercontent.com/14852932/116741695-4cec7a00-a9ab-11eb-8244-55c6b81ae182.png">
 
 ## Style Transfer Example Using TensorFlow Hub
 
@@ -136,7 +136,7 @@ INSERT VIDEO
 
 *output image*
 
-<img width="300" alt="Totoro Composition 8 Combined Image TensorFlow Hub" src="https://user-images.githubusercontent.com/14852932/116740028-478e3000-a9a9-11eb-81c4-cb6f7f853641.png">
+<img width="350" alt="Totoro Composition 8 Combined Image TensorFlow Hub" src="https://user-images.githubusercontent.com/14852932/116740028-478e3000-a9a9-11eb-81c4-cb6f7f853641.png">
 
 ## Process and Reflections
 
