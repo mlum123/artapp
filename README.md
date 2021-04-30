@@ -1,4 +1,5 @@
 # Anyone Can Draw
+
 #### Michelle Lum
 
 If you’re like me, you’d love to be able to whip up a quick sketch or a beautiful watercolor in just a few hours, but unfortunately, you lack the artistic talent to do so. That’s where my project, Anyone Can Draw, comes in.
@@ -76,65 +77,65 @@ INSERT VIDEO
 
 ## Photo to Art Examples
 
-*original photo*
+_original photo_
 
 <img width="300" alt="Food Original Photo" src="https://user-images.githubusercontent.com/14852932/116738897-e9ad1880-a9a7-11eb-8c32-dede8e2ad338.jpeg" />
 
-*oil painting*
+_oil painting_
 
 <img width="300" alt="Food Oil Painting" src="https://user-images.githubusercontent.com/14852932/116739201-414b8400-a9a8-11eb-83da-87eacfe151a0.jpeg" />
 
-*watercolor*
+_watercolor_
 
 <img width="300" alt="Food Watercolor" src="https://user-images.githubusercontent.com/14852932/116739150-3395fe80-a9a8-11eb-944f-b0e36e3acd2a.jpeg" />
 
-*pointillist painting*
+_pointillist painting_
 
 <img width="300" alt="Food Pointillist Painting" src="https://user-images.githubusercontent.com/14852932/116739043-119c7c00-a9a8-11eb-8f56-8fdd80a8961b.jpeg" />
 
-*posterized version*
+_posterized version_
 
 <img width="300" alt="Food Posterized Version" src="https://user-images.githubusercontent.com/14852932/116739086-1f520180-a9a8-11eb-9db4-815d7c64d653.jpeg" />
 
 ---
 
-*original photo*
+_original photo_
 
 <img width="300" alt="Mudd Original Photo" src="https://user-images.githubusercontent.com/14852932/116739424-84a5f280-a9a8-11eb-80f8-d88b042121b7.jpeg" />
 
-*black-and-white pencil sketch*
+_black-and-white pencil sketch_
 
 <img width="300" alt="Mudd Black-and-White Pencil Sketch" src="https://user-images.githubusercontent.com/14852932/116739489-98e9ef80-a9a8-11eb-9ec8-ebf9c901d719.jpeg" />
 
-*color pencil sketch*
+_color pencil sketch_
 
 <img width="300" alt="Mudd Color Pencil Sketch" src="https://user-images.githubusercontent.com/14852932/116739545-a606de80-a9a8-11eb-8fcb-64df3d83e87f.jpeg" />
 
 ## Style Transfer Example Using Original Neural Style Transfer Process
 
-*content image*
+_content image_
 
 <img width="300" alt="Totoro Content Image" src="https://user-images.githubusercontent.com/14852932/116739912-1ada1880-a9a9-11eb-9a92-3a3e9360520e.jpeg" />
 
-*style image*
+_style image_
 
 <img width="300" alt="Composition 8 Style Image" src="https://user-images.githubusercontent.com/14852932/116739926-20376300-a9a9-11eb-857d-f9ca3639bdec.jpeg" />
 
-*output image*
+_output image_
 
 <img width="350" alt="Totoro Composition 8 Combined Image Original Process" src="https://user-images.githubusercontent.com/14852932/116741695-4cec7a00-a9ab-11eb-8244-55c6b81ae182.png">
 
 ## Style Transfer Example Using TensorFlow Hub
 
-*content image*
+_content image_
 
 <img width="300" alt="Totoro Content Image" src="https://user-images.githubusercontent.com/14852932/116739912-1ada1880-a9a9-11eb-9a92-3a3e9360520e.jpeg" />
 
-*style image*
+_style image_
 
 <img width="300" alt="Composition 8 Style Image" src="https://user-images.githubusercontent.com/14852932/116739926-20376300-a9a9-11eb-857d-f9ca3639bdec.jpeg" />
 
-*output image*
+_output image_
 
 <img width="350" alt="Totoro Composition 8 Combined Image TensorFlow Hub" src="https://user-images.githubusercontent.com/14852932/116740028-478e3000-a9a9-11eb-81c4-cb6f7f853641.png">
 
@@ -148,7 +149,7 @@ With the Flask app up and running, I decided to pursue a stretch goal of perform
 
 I tried running neural style transfer on a Colab GPU, and it was much faster (took only about 5 minutes to run 1000 iterations).
 
-However, I wouldn't have access to the Colab GPU on my Flask app, so I did some more digging and found TensorFlow Hub's pretrained image stylization module, which is what I ended up using in my Flask app for faster style transfer. TensorFlow Hub's pretrained image stylization module took less than a minute to perform style transfer! The style transfer results from TensorFlow Hub and my original neural style transfer process are different, as you can see above, but I think both results are quite interesting.
+However, I wouldn't have access to the Colab GPU on my Flask app, so I did some more digging and found TensorFlow Hub's pretrained image stylization module, which is what I ended up using in my Flask app for faster style transfer. TensorFlow Hub's pretrained image stylization module took less than a minute to perform style transfer! The style transfer results from TensorFlow Hub and my original neural style transfer process are different — as you can see above — but I think both results are quite interesting.
 
 Ultimately, deploying to Heroku still proved to be a bit iffy. I was not able to get my photo-to-art pointillizing and posterizing features up on Heroku due to Heroku's default 30-second request timeout. Pointillizing and posterizing take longer than 30 seconds to run, so my Heroku app would break if I included those features on the deployed app.
 
