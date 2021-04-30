@@ -114,11 +114,11 @@ _color pencil sketch_
 
 ## Style Transfer Example Using Original Neural Style Transfer Process
 
-_content image_
+_content image: totoro_
 
 <img width="300" alt="Totoro Content Image" src="https://user-images.githubusercontent.com/14852932/116739912-1ada1880-a9a9-11eb-9a92-3a3e9360520e.jpeg" />
 
-_style image_
+_style image: composition 8_
 
 <img width="300" alt="Composition 8 Style Image" src="https://user-images.githubusercontent.com/14852932/116739926-20376300-a9a9-11eb-857d-f9ca3639bdec.jpeg" />
 
@@ -126,19 +126,33 @@ _output image_
 
 <img width="350" alt="Totoro Composition 8 Combined Image Original Process" src="https://user-images.githubusercontent.com/14852932/116741695-4cec7a00-a9ab-11eb-8244-55c6b81ae182.png">
 
-## Style Transfer Example Using TensorFlow Hub
+## Style Transfer Examples Using TensorFlow Hub
 
-_content image_
+_content image: totoro_
 
 <img width="300" alt="Totoro Content Image" src="https://user-images.githubusercontent.com/14852932/116739912-1ada1880-a9a9-11eb-9a92-3a3e9360520e.jpeg" />
 
-_style image_
+_style image: composition 8_
 
 <img width="300" alt="Composition 8 Style Image" src="https://user-images.githubusercontent.com/14852932/116739926-20376300-a9a9-11eb-857d-f9ca3639bdec.jpeg" />
 
 _output image_
 
 <img width="350" alt="Totoro Composition 8 Combined Image TensorFlow Hub" src="https://user-images.githubusercontent.com/14852932/116740028-478e3000-a9a9-11eb-81c4-cb6f7f853641.png">
+
+---
+
+_content image: from the prokudin-gorskii collection_
+
+<img width="300" alt="Prokudin-Gorskii Content Image" src="https://user-images.githubusercontent.com/14852932/116761451-8f727e80-a9cc-11eb-8b02-4d7fcd5900bd.jpg" />
+
+_style image: composition 7_
+
+<img width="300" alt="Composition 7 Style Image" src="https://user-images.githubusercontent.com/14852932/116761456-939e9c00-a9cc-11eb-8f24-9fbc38d47cbe.jpeg" />
+
+_output image_
+
+<img width="350" alt="Prokudin-Gorskii Composition 7 Combined Image TensorFlow Hub" src="https://user-images.githubusercontent.com/14852932/116761477-a1542180-a9cc-11eb-91c4-3451e634b587.jpg">
 
 ## Process and Reflections
 
