@@ -10,7 +10,7 @@ The app can also perform style transfer. Upload one content image and one style 
 
 Deployed at https://michelles-art-app.herokuapp.com/, unfortunately without the pointillist painting and posterized results because those are too slow for Heroku's default request timeout of 30 seconds.
 
-**[Flask App Demo](https://youtu.be/SUOt_b0j2bg)**
+**_Flask App Demo: https://youtu.be/SUOt_b0j2bg_**
 
 ## Run this project locally
 
