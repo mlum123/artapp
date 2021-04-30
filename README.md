@@ -10,6 +10,8 @@ The app can also perform style transfer. Upload one content image and one style 
 
 Deployed at https://michelles-art-app.herokuapp.com/, unfortunately without the pointillist painting and posterized results because those are too slow for Heroku's default request timeout of 30 seconds.
 
+**[Flask App Demo](https://youtu.be/SUOt_b0j2bg)**
+
 ## Run this project locally
 
 Download the GitHub repo.
@@ -70,10 +72,6 @@ Needed to fix library errors when using OpenCV on a Heroku app with heroku-build
 
 Procfile:
 Specifies the command to be executed by the Heroku app on startup.
-
-## Flask App Demo
-
-INSERT VIDEO
 
 ## Photo to Art Examples
 
