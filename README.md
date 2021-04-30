@@ -152,7 +152,7 @@ _style image: composition 7_
 
 _output image_
 
-<img width="350" alt="Prokudin-Gorskii Composition 7 Combined Image TensorFlow Hub" src="https://user-images.githubusercontent.com/14852932/116761477-a1542180-a9cc-11eb-91c4-3451e634b587.jpg">
+<img width="300" alt="Prokudin-Gorskii Composition 7 Combined Image TensorFlow Hub" src="https://user-images.githubusercontent.com/14852932/116761477-a1542180-a9cc-11eb-91c4-3451e634b587.jpg">
 
 ## Process and Reflections
 
