@@ -76,37 +76,53 @@ INSERT VIDEO
 
 ## Photo to Art Examples
 
-original photo: ![food original image](https://user-images.githubusercontent.com/14852932/116738897-e9ad1880-a9a7-11eb-8c32-dede8e2ad338.jpeg)
+original photo: 
+<img width="300" alt="Food Original Photo" src="https://user-images.githubusercontent.com/14852932/116738897-e9ad1880-a9a7-11eb-8c32-dede8e2ad338.jpeg" />
 
-oil painting: ![food_oil](https://user-images.githubusercontent.com/14852932/116739201-414b8400-a9a8-11eb-83da-87eacfe151a0.jpeg)
+oil painting:
+<img width="300" alt="Food Oil Painting" src="https://user-images.githubusercontent.com/14852932/116739201-414b8400-a9a8-11eb-83da-87eacfe151a0.jpeg" />
 
-watercolor: ![food_watercolor](https://user-images.githubusercontent.com/14852932/116739150-3395fe80-a9a8-11eb-944f-b0e36e3acd2a.jpeg)
+watercolor:
+<img width="300" alt="Food Watercolor" src="https://user-images.githubusercontent.com/14852932/116739150-3395fe80-a9a8-11eb-944f-b0e36e3acd2a.jpeg" />
 
-pointillist painting: ![food_pointillist painting](https://user-images.githubusercontent.com/14852932/116739043-119c7c00-a9a8-11eb-8f56-8fdd80a8961b.jpeg)
+pointillist painting:
+<img width="300" alt="Food Pointillist Painting" src="https://user-images.githubusercontent.com/14852932/116739043-119c7c00-a9a8-11eb-8f56-8fdd80a8961b.jpeg" />
 
-posterized version: ![food_posterized version](https://user-images.githubusercontent.com/14852932/116739086-1f520180-a9a8-11eb-9db4-815d7c64d653.jpeg)
+posterized version:
+<img width="300" alt="Food Posterized Version" src="https://user-images.githubusercontent.com/14852932/116739086-1f520180-a9a8-11eb-9db4-815d7c64d653.jpeg" />
 
-original photo: ![mudd original image](https://user-images.githubusercontent.com/14852932/116739424-84a5f280-a9a8-11eb-80f8-d88b042121b7.jpeg)
+---
 
-black-and-white pencil sketch:  ![mudd_black-and-white pencil_sketch](https://user-images.githubusercontent.com/14852932/116739489-98e9ef80-a9a8-11eb-9ec8-ebf9c901d719.jpeg)
+original photo:
+<img width="300" alt="Mudd Original Photo" src="https://user-images.githubusercontent.com/14852932/116739424-84a5f280-a9a8-11eb-80f8-d88b042121b7.jpeg" />
 
-color pencil sketch: ![mudd_color pencil sketch](https://user-images.githubusercontent.com/14852932/116739545-a606de80-a9a8-11eb-8fcb-64df3d83e87f.jpeg)
+black-and-white pencil sketch:
+<img width="300" alt="Mudd Black-and-White Pencil Sketch" src="https://user-images.githubusercontent.com/14852932/116739489-98e9ef80-a9a8-11eb-9ec8-ebf9c901d719.jpeg" />
+
+color pencil sketch:
+<img width="300" alt="Mudd Color Pencil Sketch" src="https://user-images.githubusercontent.com/14852932/116739545-a606de80-a9a8-11eb-8fcb-64df3d83e87f.jpeg" />
 
 ## Style Transfer Example Using Original Neural Style Transfer Process
 
-content image: ![totoro content image](https://user-images.githubusercontent.com/14852932/116739912-1ada1880-a9a9-11eb-9a92-3a3e9360520e.jpeg)
+content image:
+<img width="300" alt="Totoro Content Image" src="https://user-images.githubusercontent.com/14852932/116739912-1ada1880-a9a9-11eb-9a92-3a3e9360520e.jpeg" />
 
-style image: ![composition 8 style image](https://user-images.githubusercontent.com/14852932/116739926-20376300-a9a9-11eb-857d-f9ca3639bdec.jpeg)
+style image:
+<img width="300" alt="Composition 8 Style Image" src="https://user-images.githubusercontent.com/14852932/116739926-20376300-a9a9-11eb-857d-f9ca3639bdec.jpeg" />
 
-output image: <img width="1059" alt="Totoro Composition 8 Combined Image Original Process" src="https://user-images.githubusercontent.com/14852932/116739945-29c0cb00-a9a9-11eb-83a7-eb018a8d1bcc.png">
+output image:
+<img width="300" alt="Totoro Composition 8 Combined Image Original Process" src="https://user-images.githubusercontent.com/14852932/116739945-29c0cb00-a9a9-11eb-83a7-eb018a8d1bcc.png">
 
 ## Style Transfer Example Using TensorFlow Hub
 
-content image: ![totoro content image](https://user-images.githubusercontent.com/14852932/116739912-1ada1880-a9a9-11eb-9a92-3a3e9360520e.jpeg)
+content image:
+<img width="300" alt="Totoro Content Image" src="https://user-images.githubusercontent.com/14852932/116739912-1ada1880-a9a9-11eb-9a92-3a3e9360520e.jpeg" />
 
-style image: ![composition 8 style image](https://user-images.githubusercontent.com/14852932/116739926-20376300-a9a9-11eb-857d-f9ca3639bdec.jpeg)
+style image:
+<img width="300" alt="Composition 8 Style Image" src="https://user-images.githubusercontent.com/14852932/116739926-20376300-a9a9-11eb-857d-f9ca3639bdec.jpeg" />
 
-output image: ![totoro composition 8 combined image tensorflow hub](https://user-images.githubusercontent.com/14852932/116740028-478e3000-a9a9-11eb-81c4-cb6f7f853641.png)
+output image:
+<img width="300" alt="Totoro Composition 8 Combined Image TensorFlow Hub" src="https://user-images.githubusercontent.com/14852932/116740028-478e3000-a9a9-11eb-81c4-cb6f7f853641.png">
 
 ## Process and Reflections
 
